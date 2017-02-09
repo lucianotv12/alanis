@@ -1,0 +1,135 @@
+<?php
+session_start();
+include_once("../../funciones.php");
+include_once("../../models/productos.class.php");
+include_once("../../models/template.class.php");
+
+validar_permanencia();
+conectar_bd();
+
+if(!isset($_GET["accion"]))$accion= "new_stock";
+else $accion = $_GET["accion"];
+$detalle = false;
+switch($accion)
+	{
+
+//////////////////////////////////STOCK///////////////////////////////////////////////////////
+	case "stock":
+				{
+					$producto = new Producto;
+					$movimientos = Producto::movimientos_stock($_GET['id']);
+					//ingreso un registro en el log
+					$hoy = date("Y-m-d G:i:s"); 
+
+					include("../principal.php");
+					include("../view/stock/stock.php");
+				}
+				break;
+
+
+
+	case "modify_stock" :
+				{
+				// ESPERA UN ID
+					$producto = new Producto($_GET["id"]);
+				
+					$mensaje_cabezera = "MODIFICACION DEL MOVIMIENTO";
+					$cambio = "modificar";
+					$detalle = false;
+					$boton=true;							
+					$deshabilitado = "";
+					$talles = Producto::get_talles();
+					$colores = Producto::get_colores();
+					$movimientos= Producto::detalle_movimiento_stock($_GET['id']);
+
+
+					include("../principal.php");
+					include("../view/stock/stock_abm.php");
+
+				}
+				break;
+
+	case "update_stock":
+				{
+
+					Producto::modificar_stock(1,$_GET["id"],$_POST);
+
+					//ingreso un registro en el log
+					$hoy = date("Y-m-d G:i:s"); 
+					$texto = "Modificacion stock ".$_GET["id"];
+//					mysql_query("insert into log values(null,".$_producto->get_id().",'".$texto."', '".$hoy."')");
+
+					//	if($producto->get_id_tipo() != 1 ){
+						header("Location: index.php?accion=stock&id=1");
+					//	}else{
+					//	header("Location: index.php?accion=detail&id=".$_producto->idproducto);
+					//	}
+				}
+				break;
+	case "insert_stock":
+				{
+
+				$respuesta= Producto::modificar_stock(3,0,$_POST);
+
+					//ingreso un registro en el log
+					$hoy = date("Y-m-d G:i:s"); 
+					$texto = "Modificacion stock ".$_GET["id"];
+//					mysql_query("insert into log values(null,".$_producto->get_id().",'".$texto."', '".$hoy."')");
+
+					//	if($producto->get_id_tipo() != 1 ){
+						header("Location: index.php?accion=new_stock&respuesta=$respuesta");
+					//	}else{
+					//	header("Location: index.php?accion=detail&id=".$_producto->idproducto);
+					//	}
+				}
+				break;
+	case "new_stock" :
+				{
+				// Muestra el formulario de NUEVO
+				$producto = new Producto;
+
+				$mensaje_cabezera = "ALTA STOCK";
+				$boton=true;
+				$cambio = "nuevo";
+				$deshabilitado = "";
+
+				Template::draw_header();
+
+			//	$gerarquia = Producto::gerarquia_Producto($_Producto->id);
+				include("../../view/stock/stock_abm.php");
+#				$template->draw_footer();
+				}
+				break;
+
+	case "codigo_barras" :
+				{
+				// ESPERA UN ID
+				$producto = new Producto($_GET["id"]);
+			
+					$mensaje_cabezera = "CODIGO DE BARRA DEL PRODUCTO";  		
+					$cambio = "";
+					$boton=false;		
+					$detalle = true;
+					$deshabilitado = "disabled";
+					$talles = Producto::get_talles();
+					$colores = Producto::get_colores();
+					$codigo = $producto->get_codigo();
+				//	$idtalle= $producto->get_idTalle();
+				//	$idcolor= $producto->get_idColor();
+
+					$type = @$_POST['type'];
+					$output = @$_POST['output'];
+					$width = @$_POST['width'];
+					$height = @$_POST['height'];
+					$border = @$_POST['height'];
+					$drawtext = @$_POST['drawtext'];
+					$stretchtext = @$_POST['stretchtext'];
+					$negative = @$_POST['negative'];
+
+					include("../view/stock/codigo_barras/index.php");
+				}
+				break;
+	
+	
+	}
+?>

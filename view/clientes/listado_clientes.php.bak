@@ -1,0 +1,62 @@
+
+<script language="JavaScript">
+<!--
+function busqueda(buscador)
+{
+	document.datos.action="index.php?accion=listado_clientes&buscador=" + buscador ;
+	document.datos.submit();
+}
+//-->
+</script>
+<script> 
+function devolver_valor(id,nombre,descuento,condicion_iva){ 
+    opener.document.datos._idcliente.value = id 
+    opener.document.datos.descripcion.value = nombre 
+    opener.document.datos.descuento.value = descuento 
+    opener.document.datos.condicion_iva.value = condicion_iva 
+	window.close() 
+} 
+</script> 
+
+<link rel="stylesheet" type="text/css" href="<?= CSS?>style.css">
+
+<div class="contentArea"> 
+
+<form method="post" name="datos">
+<!--<div class="pageTitle">
+LISTADO DE CLIENTES 
+</div>
+-->
+<br>
+<table cellpadding=0 cellspacing=0 border=1 width="500" align="center" >
+		<tr><td colspan=5 align="left">
+		Ingrese datos del Cliente <input type="text" size="70" name="buscador" value="<?= $_POST["buscador"]?>">
+		<a href="javaScript:busqueda('<?= $_POST['buscador'] ?>')">BUSCAR</A>
+		<a href="javaScript:busqueda('TODOS')">TODOS</A>
+		<a href="javaScript:busqueda('DEUDORES')">DEUDORES</A>
+		</td></tr>
+	<tr>
+		<th>Elejir</th>
+		<th>id</th>
+		<th>Razon Social</th>
+		<th>Estado</th>
+		<?if($gerarquia == true) {?>	<th> </th><? } ?>
+	</tr>
+	<? $contador = 0;
+	foreach ($clientes as $cliente):
+	$contador++;
+	?>
+	<tr class="<?=($contador%2==0? "fila_par":"fila_impar");?>">
+		<td>
+		<input type="image" src="<?= IMGS?>boton_play.jpg" width="15" height="15" border="0" alt="seleccionar" onclick="devolver_valor('<?= $cliente->get_id() ?>','<?= $cliente->get_nombre() ?>','<?= $cliente->get_descuento() ?>','<?= $cliente->get_condicion_iva() ?>')" ></td>
+		<td><?= $cliente->get_id() ?></td>
+		<td><?= $cliente->get_nombre() ?></td>
+		<td><?= $cliente_deudor = Factura::get_cliente_deudor($cliente->get_id()); ?></td>
+
+	</tr>
+	<? endforeach ?>
+
+	</table>
+</form>
+</div>
+</div>

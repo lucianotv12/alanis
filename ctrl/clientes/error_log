@@ -1,0 +1,38 @@
+[07-Sep-2010 10:56:05] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: Unable to jump to row 0 on MySQL result index 7 in /home/control/public_html/lady-jane/models/facturas.class.php on line 86
+[07-Sep-2010 20:29:29] PHP Parse error:  syntax error, unexpected '}' in /home/control/public_html/lady-jane/admin/view/clientes/abm.php on line 100
+[22-Sep-2010 07:36:50] PHP Warning:  mysql_result(): supplied argument is not a valid MySQL result resource in /home/control/public_html/lady-jane/models/clientes.class.php on line 222
+[22-Sep-2010 07:36:58] PHP Warning:  mysql_result(): supplied argument is not a valid MySQL result resource in /home/control/public_html/lady-jane/models/clientes.class.php on line 222
+[22-Sep-2010 07:37:16] PHP Warning:  mysql_result(): supplied argument is not a valid MySQL result resource in /home/control/public_html/lady-jane/models/clientes.class.php on line 222
+[22-Sep-2010 07:37:35] PHP Warning:  mysql_result(): supplied argument is not a valid MySQL result resource in /home/control/public_html/lady-jane/models/clientes.class.php on line 222
+[23-Nov-2010 20:27:38] PHP Warning:  mysql_result(): supplied argument is not a valid MySQL result resource in /home/control/public_html/lady-jane/models/clientes.class.php on line 222
+[23-Nov-2010 20:27:48] PHP Warning:  mysql_result(): supplied argument is not a valid MySQL result resource in /home/control/public_html/lady-jane/models/clientes.class.php on line 222
+[30-Nov-2010 21:57:09] PHP Fatal error:  Call to undefined function  get_productos_x_factura() in /home/control/public_html/lady-jane/admin/clientes/index.php on line 343
+[30-Nov-2010 21:57:12] PHP Fatal error:  Call to undefined function  get_productos_x_factura() in /home/control/public_html/lady-jane/admin/clientes/index.php on line 343
+[02-Dec-2010 22:35:36] PHP Warning:  mysql_result(): supplied argument is not a valid MySQL result resource in /home/control/public_html/lady-jane/models/clientes.class.php on line 222
+[02-Dec-2010 22:35:36] PHP Warning:  mysql_result(): supplied argument is not a valid MySQL result resource in /home/control/public_html/lady-jane/models/clientes.class.php on line 229
+[02-Dec-2010 22:35:43] PHP Warning:  mysql_result(): supplied argument is not a valid MySQL result resource in /home/control/public_html/lady-jane/models/clientes.class.php on line 222
+[02-Dec-2010 22:36:01] PHP Warning:  mysql_result(): supplied argument is not a valid MySQL result resource in /home/control/public_html/lady-jane/models/clientes.class.php on line 222
+[02-Dec-2010 22:36:09] PHP Warning:  mysql_result(): supplied argument is not a valid MySQL result resource in /home/control/public_html/lady-jane/models/clientes.class.php on line 222
+[02-Dec-2010 22:37:26] PHP Warning:  mysql_result(): supplied argument is not a valid MySQL result resource in /home/control/public_html/lady-jane/models/clientes.class.php on line 222
+[02-Dec-2010 22:41:12] PHP Warning:  mysql_result(): supplied argument is not a valid MySQL result resource in /home/control/public_html/lady-jane/models/clientes.class.php on line 222
+[02-Dec-2010 22:42:11] PHP Warning:  mysql_result(): supplied argument is not a valid MySQL result resource in /home/control/public_html/lady-jane/models/clientes.class.php on line 222
+[07-Dec-2010 05:22:16] PHP Warning:  mysql_result(): supplied argument is not a valid MySQL result resource in /home/control/public_html/lady-jane/models/clientes.class.php on line 229
+[07-Dec-2010 05:22:29] PHP Warning:  mysql_result(): supplied argument is not a valid MySQL result resource in /home/control/public_html/lady-jane/models/clientes.class.php on line 229
+[03-Mar-2011 08:51:45] PHP Warning:  mysql_result(): supplied argument is not a valid MySQL result resource in /home/control/public_html/lady-jane/models/clientes.class.php on line 229
+[15-Mar-2011 21:45:34] PHP Warning:  include(../principal.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/control/public_html/alanis/ctrl/clientes/index.php on line 47
+[15-Mar-2011 21:45:34] PHP Warning:  include(../principal.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/control/public_html/alanis/ctrl/clientes/index.php on line 47
+[15-Mar-2011 21:45:34] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../principal.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/control/public_html/alanis/ctrl/clientes/index.php on line 47
+[15-Mar-2011 21:45:34] PHP Warning:  include(../view/clientes/list.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/control/public_html/alanis/ctrl/clientes/index.php on line 48
+[15-Mar-2011 21:45:34] PHP Warning:  include(../view/clientes/list.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/control/public_html/alanis/ctrl/clientes/index.php on line 48
+[15-Mar-2011 21:45:34] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../view/clientes/list.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/control/public_html/alanis/ctrl/clientes/index.php on line 48
+[16-Mar-2011 09:29:27] PHP Fatal error:  Call to undefined function  validar_permanencia() in /home/control/public_html/alanis/ctrl/clientes/index.php on line 7
+[16-Mar-2011 09:30:13] PHP Fatal error:  Call to undefined function  validar_permanencia() in /home/control/public_html/alanis/ctrl/clientes/index.php on line 7
+[18-Mar-2011 10:48:29] PHP Fatal error:  Class 'Producto' not found in /home/control/public_html/alanis/models/template.class.php on line 44
+[18-Mar-2011 13:28:10] PHP Fatal error:  Class 'Producto' not found in /home/control/public_html/alanis/models/template.class.php on line 44
+[18-Mar-2011 14:39:01] PHP Fatal error:  Class 'Producto' not found in /home/control/public_html/alanis/models/template.class.php on line 44
+[18-Mar-2011 14:40:54] PHP Fatal error:  Class 'Producto' not found in /home/control/public_html/alanis/models/template.class.php on line 42
+[22-Mar-2011 09:49:13] PHP Parse error:  syntax error, unexpected $end in /home/control/public_html/alanis/view/clientes/abm.php on line 191
+[29-Mar-2011 22:47:49] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: Unable to jump to row 0 on MySQL result index 10 in /home/control/public_html/alanis/models/clientes.class.php on line 229
+[29-Mar-2011 22:47:53] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: Unable to jump to row 0 on MySQL result index 10 in /home/control/public_html/alanis/models/clientes.class.php on line 229
+[30-Mar-2011 22:08:55] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: Unable to jump to row 0 on MySQL result index 10 in /home/control/public_html/alanis/models/clientes.class.php on line 229
+[31-Mar-2011 17:22:53] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: Unable to jump to row 0 on MySQL result index 11 in /home/control/public_html/alanis/models/clientes.class.php on line 229

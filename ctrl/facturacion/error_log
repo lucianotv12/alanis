@@ -1,0 +1,4 @@
+[29-Mar-2011 22:44:26] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: Unable to jump to row 0 on MySQL result index 7 in /home/control/public_html/alanis/models/facturas.class.php on line 147
+[29-Mar-2011 22:44:26] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/control/public_html/alanis/models/facturas.class.php:147) in /home/control/public_html/alanis/ctrl/facturacion/index.php on line 263
+[29-Mar-2011 22:45:17] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: Unable to jump to row 0 on MySQL result index 7 in /home/control/public_html/alanis/models/facturas.class.php on line 147
+[29-Mar-2011 22:45:17] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/control/public_html/alanis/models/facturas.class.php:147) in /home/control/public_html/alanis/ctrl/facturacion/index.php on line 263
