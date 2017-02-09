@@ -3,7 +3,7 @@ session_start();
 include_once("../../funciones.php");
 
 validar_permanencia();
-conectar_bd();
+//conectar_bd();
 //validar_permanencia();
 //validar_permanencia_admin();
 //$_usuario = unserialize($_SESSION["usuario"]);

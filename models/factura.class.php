@@ -285,7 +285,8 @@ class Factura
 			$sql = $conn->prepare("SELECT SUM(precio_total) as precio_total FROM clientes_factura_productos where activo = 2 ");
 			$sql->execute();
 			$datos_carga = $sql->fetch(PDO::FETCH_ASSOC);  				
-			$importe_total = $datos_carga;
+			$importe_total = $datos_carga["precio_total"];
+
 
 			$factura = new Factura();
 			$factura->set_idCliente($_PARAM["_idcliente"]);
@@ -594,10 +595,18 @@ class Factura
 		$conn = new Conexion();					
 		$sql = $conn->prepare("select * from clientes_facturas where idTipo = 1 and idCliente = " . $_idcliente);	
 		$sql->execute();
-		$facturas = $sql->fetchAll();
+		$resultado = $sql->fetchAll();
 
 		$sql=null;
 		$conn=null;			
+
+		$facturas = array();
+	//	while($row = @mysql_fetch_assoc($result))
+		foreach($resultado as $row)	
+		{
+		$facturas[] = new Factura($row['id']);
+		}
+	//	@mysql_free_result($result);
 
 		foreach($facturas as $factura):
 		

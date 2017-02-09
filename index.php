@@ -6,7 +6,7 @@ session_start();
 include_once("funciones.php");
 
 
-conectar_bd();
+//conectar_bd();
 
 if (isset($_POST["user"]) && isset($_POST["password"]))
 	{
