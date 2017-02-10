@@ -314,7 +314,7 @@ switch($accion)
                              parent.jQuery.fancybox.close();
 
                              </script>                                        
-                             <?	                                        
+                             <?php	                                        
 
 				}
 				break;
@@ -352,7 +352,7 @@ switch($accion)
                              parent.jQuery.fancybox.close();
 
                              </script>                                        
-                             <?	
+                             <?php	
                             }
 				break;
 
