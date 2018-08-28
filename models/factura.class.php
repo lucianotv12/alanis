@@ -21,7 +21,7 @@ class Factura
 		{
 			$conn = new Conexion();
 
-			$sql = $conn->prepare("select * from clientes_facturas where id=:ID"); 
+			$sql = $conn->prepare("SELECT * from clientes_facturas where id=:ID"); 
 			$sql->execute(array('ID' => $_id));
 			$datos_carga = $sql->fetch(PDO::FETCH_ASSOC);
 			$this->id = $datos_carga['id']; 

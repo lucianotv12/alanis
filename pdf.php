@@ -1,9 +1,10 @@
 <?php
-require('../models/pdf.class/invoice.php');
+require('models/pdf.class/invoice.php');
 include_once("funciones.php");
-conectar_bd();
+//conectar_bd();
 
 $factura = new Factura($_GET["idFactura"]);
+//print_r($factura);
 $cliente = new Cliente($factura->get_idCliente());
 $productos_facturas = Factura::get_productos_x_factura($_GET["idFactura"]);
 $fecha = date("d/m/Y");

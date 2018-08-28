@@ -110,7 +110,7 @@ foreach($_DATOS_EXCEL as $campo => $valor){
 //print_r($valor); echo "<br>";   
  $descripcion = mysql_real_escape_string($valor["descripcion"]); 
  $referencia = mysql_real_escape_string($valor["referencia"]);
- $precio = mysql_real_escape_string($valor["precio"]);
+ $puntos = mysql_real_escape_string($valor["puntos"]);
  
  if($descripcion != "" or $referencia != "" ):
         $query_consulta = "select * FROM productos where descripcion = '$descripcion' and idSubcategoria = 613";    

@@ -76,7 +76,7 @@ shortcut.add("F12", function () { btnBuscar_onclick(); });
 <?
  if($_SERVER['PHP_SELF']== '/alanis/ctrl/facturacion/index.php' and $_variable == true):
 
-$_evento = "javascript:popUp('../../pdf/presupuesto.php?idFactura= ". $_id . " ')";
+$_evento = "javascript:popUp('../../pdf.php?idFactura=". $_id . " ')";
 $_evento .= ';document.datos.buscador.focus();';
 
  $_variable = 1 ;
